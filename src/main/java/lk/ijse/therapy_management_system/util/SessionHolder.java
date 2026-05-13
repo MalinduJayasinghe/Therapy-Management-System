@@ -12,12 +12,12 @@ public class SessionHolder {
 
     public static boolean isAdmin() {
         return loggedInUser != null &&
-               loggedInUser.getRole() == lk.ijse.serenity.entity.User.Role.ADMIN;
+               loggedInUser.getRole() == lk.ijse.therapy_management_system.entity.User.Role.ADMIN;
     }
 
     public static boolean isReceptionist() {
         return loggedInUser != null &&
-               loggedInUser.getRole() == lk.ijse.serenity.entity.User.Role.RECEPTIONIST;
+               loggedInUser.getRole() == lk.ijse.therapy_management_system.entity.User.Role.RECEPTIONIST;
     }
 
     public static void clearSession() {
