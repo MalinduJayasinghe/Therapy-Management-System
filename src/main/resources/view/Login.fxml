@@ -12,11 +12,9 @@
             styleClass="root-pane"
             stylesheets="@../css/style.css">
 
-    <!-- Left decorative panel -->
     <HBox AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
           AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
 
-        <!-- Left brand panel -->
         <VBox prefWidth="460" styleClass="brand-panel"
               alignment="CENTER" spacing="20">
             <VBox.margin><Insets/></VBox.margin>
@@ -35,7 +33,6 @@
                    styleClass="brand-tagline"/>
         </VBox>
 
-        <!-- Right login card -->
         <VBox prefWidth="460" alignment="CENTER"
               styleClass="login-card-container">
 
@@ -43,7 +40,6 @@
                   alignment="TOP_CENTER">
                 <VBox.margin><Insets top="0"/></VBox.margin>
 
-                <!-- Card header -->
                 <VBox alignment="CENTER" spacing="4"
                       style="-fx-padding:30 30 20 30;">
                     <Label text="Welcome Back" styleClass="login-heading"/>
@@ -51,10 +47,8 @@
                            styleClass="login-subheading"/>
                 </VBox>
 
-                <!-- Form area -->
                 <VBox spacing="14" style="-fx-padding:0 30 24 30;">
 
-                    <!-- Username -->
                     <VBox spacing="5">
                         <Label text="Username" styleClass="field-label"/>
                         <TextField fx:id="txtUsername"
@@ -65,14 +59,12 @@
                                managed="false"/>
                     </VBox>
 
-                    <!-- Password -->
                     <VBox spacing="5">
                         <Label text="Password" styleClass="field-label"/>
                         <StackPane>
                             <PasswordField fx:id="txtPassword"
                                            promptText="Enter your password"
                                            styleClass="form-field"/>
-                            <!-- Visible text field overlaid when show is toggled -->
                             <TextField fx:id="txtPasswordVisible"
                                        promptText="Enter your password"
                                        styleClass="form-field"
@@ -91,13 +83,11 @@
                                managed="false"/>
                     </VBox>
 
-                    <!-- General error (wrong credentials) -->
                     <Label fx:id="lblGeneralError"
                            styleClass="error-label-center"
                            wrapText="true" textAlignment="CENTER"
                            visible="false" managed="false"/>
 
-                    <!-- Login button -->
                     <Button fx:id="btnLogin" text="Sign In"
                             styleClass="btn-primary"
                             prefWidth="Infinity"
@@ -106,7 +96,6 @@
 
                 </VBox>
 
-                <!-- Footer info -->
                 <HBox alignment="CENTER"
                       style="-fx-padding:12 0 20 0; -fx-border-color:#e8ecf0 transparent transparent transparent; -fx-border-width:1;">
                     <Label text="Serenity MHT Center © 2025"
