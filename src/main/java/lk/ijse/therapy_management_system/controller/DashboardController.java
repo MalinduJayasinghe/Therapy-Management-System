@@ -12,7 +12,6 @@ import lk.ijse.therapy_management_system.util.SessionHolder;
 
 public class DashboardController {
 
-    /* ------------------------ Sidebar buttons ------------------------ */
     @FXML private Label     lblUsername;
     @FXML private Label     lblRole;
     @FXML private Label     lblTopbarUser;
