@@ -6,6 +6,7 @@ import lk.ijse.therapy_management_system.bo.BOFactory;
 import lk.ijse.therapy_management_system.bo.BOTypes;
 import lk.ijse.therapy_management_system.bo.custom.UserBO;
 import lk.ijse.therapy_management_system.dto.UserDTO;
+import lk.ijse.therapy_management_system.exception.DuplicateEntryException;
 import lk.ijse.therapy_management_system.exception.ValidationException;
 import lk.ijse.therapy_management_system.util.SessionHolder;
 import lk.ijse.therapy_management_system.util.ValidationUtil;
