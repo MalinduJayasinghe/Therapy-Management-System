@@ -54,7 +54,6 @@ public class Patient {
     @Column(name = "emergency_contact_phone", length = 15)
     private String emergencyContactPhone;
 
-    // One Patient -> Many TherapySessions
     @OneToMany(
             mappedBy = "patient",
             cascade = CascadeType.ALL,
@@ -63,7 +62,6 @@ public class Patient {
     )
     private List<TherapySession> therapySessions = new ArrayList<>();
 
-    // One Patient -> Many Payments
     @OneToMany(
             mappedBy = "patient",
             cascade = CascadeType.ALL,

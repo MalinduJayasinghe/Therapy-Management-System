@@ -20,17 +20,14 @@ public class TherapySession {
     @Column(name = "session_id", length = 10)
     private String sessionId;
 
-    // Many TherapySessions -> One Patient
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
 
-    // Many TherapySessions -> One Therapist
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "therapist_id", nullable = false)
     private Therapist therapist;
 
-    // Many TherapySessions -> One TherapyProgram
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "program_id", nullable = false)
     private TherapyProgram therapyProgram;
@@ -51,7 +48,6 @@ public class TherapySession {
     @Column(name = "notes", columnDefinition = "TEXT")
     private String notes;
 
-    // One TherapySession -> One Payment (cascade to payment when session persisted)
     @OneToOne(mappedBy = "therapySession", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Payment payment;
 

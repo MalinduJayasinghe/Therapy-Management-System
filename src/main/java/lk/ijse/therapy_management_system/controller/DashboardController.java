@@ -19,13 +19,10 @@ public class DashboardController {
     @FXML private Label     lblPageTitle;
     @FXML private AnchorPane contentArea;
 
-    // Admin-only nodes
     @FXML private Label  lblAdminSection;
     @FXML private Button btnTherapists;
     @FXML private Button btnPrograms;
     @FXML private Button btnUsers;
-
-    // All nav buttons (for active-state styling)
     @FXML private Button btnDashboard;
     @FXML private Button btnPatients;
     @FXML private Button btnSessions;
@@ -42,7 +39,6 @@ public class DashboardController {
         lblRole.setText(user.getRole().name());
         lblTopbarUser.setText("Hello, " + user.getFullName().split(" ")[0] + "  |  " + user.getRole());
 
-        // Show Admin-only menu items
         if (user.getRole() == User.Role.ADMIN) {
             lblAdminSection.setVisible(true);
             lblAdminSection.setManaged(true);
@@ -124,7 +120,6 @@ public class DashboardController {
         }
     }
 
-    /* Highlights the active nav buttons and updates the top title. */
     private void setActive(Button activeBtn, String pageTitle) {
         Button[] allBtns = {
                 btnDashboard,

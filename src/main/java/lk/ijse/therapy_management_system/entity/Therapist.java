@@ -40,7 +40,6 @@ public class Therapist {
     @Column(name = "is_active", nullable = false)
     private boolean active = true;
 
-    // One Therapist -> Many TherapySessions
     @OneToMany(
             mappedBy = "therapist",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE},
@@ -48,7 +47,6 @@ public class Therapist {
     )
     private List<TherapySession> therapySessions = new ArrayList<>();
 
-    // Many Therapists -> Many TherapyPrograms
     @ManyToMany(
             cascade = {CascadeType.PERSIST, CascadeType.MERGE},
             fetch = FetchType.LAZY

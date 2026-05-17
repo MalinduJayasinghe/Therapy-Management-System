@@ -20,12 +20,10 @@ public class Payment {
     @Column(name = "payment_id", length = 10)
     private String paymentId;
 
-    // One Payment -> One TherapySession
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "session_id", nullable = false, unique = true)
     private TherapySession therapySession;
 
-    // Many Payments -> One Patient
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;

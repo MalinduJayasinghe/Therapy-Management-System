@@ -93,10 +93,8 @@ public class LoginController {
 
             UserDTO user = userBO.login(username, password);
 
-            // Store in session
             SessionHolder.setLoggedInUser(user);
 
-            // Navigate to Dashboard
             Stage stage = (Stage) btnLogin.getScene().getWindow();
             NavigationUtil.navigateTo(stage, "/view/Dashboard.fxml",
                     "Serenity MHT Center — " + user.getRole().name());

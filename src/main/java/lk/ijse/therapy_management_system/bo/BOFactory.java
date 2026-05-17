@@ -13,7 +13,6 @@ public class BOFactory {
         return boFactory == null ? (boFactory = new BOFactory()) : boFactory;
     }
 
-    @SuppressWarnings("unchecked")
     public <T extends SuperBO> T getBO(BOTypes boType) {
         return switch (boType) {
             case USER -> (T) new UserBOImpl();
