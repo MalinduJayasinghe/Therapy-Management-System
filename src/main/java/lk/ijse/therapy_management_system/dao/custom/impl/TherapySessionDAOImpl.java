@@ -57,7 +57,7 @@ public class TherapySessionDAOImpl implements TherapySessionDAO {
                     "WHERE ts.therapist.therapistId = :tid " +
                     "AND ts.sessionDate = :date " +
                     "AND ts.sessionTime = :time " +
-                    "AND ts.status <> lk.ijse.serenity.entity.TherapySession$SessionStatus.CANCELLED",
+                    "AND ts.status <> lk.ijse.therapy_management_system.entity.TherapySession$SessionStatus.CANCELLED",
                     Long.class)
                     .setParameter("tid", therapistId)
                     .setParameter("date", date)
@@ -72,7 +72,7 @@ public class TherapySessionDAOImpl implements TherapySessionDAO {
             Long count = session.createQuery(
                     "SELECT COUNT(ts) FROM TherapySession ts " +
                     "WHERE ts.patient.patientId = :pid AND ts.therapyProgram.programId = :pgid " +
-                    "AND ts.status <> lk.ijse.serenity.entity.TherapySession$SessionStatus.CANCELLED",
+                    "AND ts.status <> lk.ijse.therapy_management_system.entity.TherapySession$SessionStatus.CANCELLED",
                     Long.class)
                     .setParameter("pid", patientId)
                     .setParameter("pgid", programId)
