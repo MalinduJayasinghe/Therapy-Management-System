@@ -76,7 +76,7 @@ public class ChangeCredentialsController {
         txtConfirmPasswordVisible.setManaged(confirmVisible);
         txtConfirmPassword.setVisible(!confirmVisible);
         txtConfirmPassword.setManaged(!confirmVisible);
-        btnToggleConfirm.setText(confirmVisible ? "🙈" : "👁");
+        btnToggleConfirm.setText(confirmVisible ? "\uD83D\uDD12" : "👁");
         (confirmVisible ? txtConfirmPasswordVisible : txtConfirmPassword).requestFocus();
     }
 
