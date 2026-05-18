@@ -14,12 +14,12 @@
         <VBox fx:id="sidebar" styleClass="sidebar" spacing="0">
 
             <VBox styleClass="sidebar-header" spacing="4">
-                <Label text="🌿 Serenity" styleClass="sidebar-title"/>
+                <Label text="✙ Serenity" styleClass="sidebar-title"/>
                 <Label text="MHT Center" styleClass="sidebar-title"
                        style="-fx-font-size:12px; -fx-font-weight:normal;"/>
                 <Separator style="-fx-background-color:rgba(255,255,255,0.3); -fx-padding:4 0;"/>
                 <Label fx:id="lblUsername" text="User" styleClass="sidebar-username"/>
-                <Label fx:id="lblRole"     text="ROLE" styleClass="sidebar-role-badge"/>
+                <Label fx:id="lblRole" text="ROLE" styleClass="sidebar-role-badge"/>
             </VBox>
 
             <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED"
@@ -28,39 +28,25 @@
                 <VBox fx:id="navContainer" spacing="2" style="-fx-padding:8 0;">
 
                     <Label text="MAIN" styleClass="nav-section-label"/>
-                    <Button fx:id="btnDashboard" text="📊  Dashboard"
-                            styleClass="nav-btn" onAction="#loadDashboard"/>
+                    <Button fx:id="btnDashboard" text="📊  Dashboard" styleClass="nav-btn" onAction="#loadDashboard"/>
                     <Label text="PATIENTS" styleClass="nav-section-label"/>
-                    <Button fx:id="btnPatients" text="🧑‍⚕️  Patients"
-                            styleClass="nav-btn" onAction="#loadPatients"/>
-                    <Button fx:id="btnSessions" text="📅  Therapy Sessions"
-                            styleClass="nav-btn" onAction="#loadSessions"/>
-                    <Button fx:id="btnPayments" text="💳  Payments"
-                            styleClass="nav-btn" onAction="#loadPayments"/>
-                    <Label fx:id="lblAdminSection" text="ADMIN ONLY"
-                           styleClass="nav-section-label" visible="false" managed="false"/>
-                    <Button fx:id="btnTherapists" text="👨‍💼  Therapists"
-                            styleClass="nav-btn" visible="false" managed="false"
-                            onAction="#loadTherapists"/>
-                    <Button fx:id="btnPrograms"   text="📋  Therapy Programs"
-                            styleClass="nav-btn" visible="false" managed="false"
-                            onAction="#loadPrograms"/>
-                    <Button fx:id="btnUsers"      text="🔒  User Management"
-                            styleClass="nav-btn" visible="false" managed="false"
-                            onAction="#loadUsers"/>
+                    <Button fx:id="btnPatients" text="🧑‍⚕️  Patients" styleClass="nav-btn" onAction="#loadPatients"/>
+                    <Button fx:id="btnSessions" text="📅  Therapy Sessions" styleClass="nav-btn" onAction="#loadSessions"/>
+                    <Button fx:id="btnPayments" text="💳  Payments" styleClass="nav-btn" onAction="#loadPayments"/>
+                    <Label fx:id="lblAdminSection" text="ADMIN ONLY" styleClass="nav-section-label" visible="false" managed="false"/>
+                    <Button fx:id="btnTherapists" text="👨‍💼  Therapists" styleClass="nav-btn" visible="false" managed="false" onAction="#loadTherapists"/>
+                    <Button fx:id="btnPrograms"   text="📋  Therapy Programs" styleClass="nav-btn" visible="false" managed="false" onAction="#loadPrograms"/>
+                    <Button fx:id="btnUsers" text="🔒  User Management" styleClass="nav-btn" visible="false" managed="false" onAction="#loadUsers"/>
                     <Label text="REPORTS" styleClass="nav-section-label"/>
-                    <Button fx:id="btnReports" text="📈  Reports"
-                            styleClass="nav-btn" onAction="#loadReports"/>
+                    <Button fx:id="btnReports" text="📈  Reports" styleClass="nav-btn" onAction="#loadReports"/>
                     <Label text="ACCOUNT" styleClass="nav-section-label"/>
-                    <Button fx:id="btnChangeCredentials" text="🔑  Change Credentials"
-                            styleClass="nav-btn" onAction="#loadChangeCredentials"/>
+                    <Button fx:id="btnChangeCredentials" text="🔑  Change Credentials" styleClass="nav-btn" onAction="#loadChangeCredentials"/>
 
                 </VBox>
             </ScrollPane>
 
             <VBox style="-fx-padding:8 0; -fx-border-color:rgba(255,255,255,0.1) transparent transparent transparent; -fx-border-width:1;">
-                <Button text="⏏  Logout" styleClass="nav-logout-btn"
-                        onAction="#handleLogout"/>
+                <Button text="⏏  Logout" styleClass="nav-logout-btn" onAction="#handleLogout"/>
             </VBox>
 
         </VBox>
@@ -74,9 +60,7 @@
                 <Label fx:id="lblTopbarUser" text="" styleClass="sidebar-username"
                        style="-fx-text-fill:#495057;"/>
             </HBox>
-
-            <AnchorPane fx:id="contentArea" VBox.vgrow="ALWAYS"
-                        styleClass="content-panel"/>
+            <AnchorPane fx:id="contentArea" VBox.vgrow="ALWAYS" styleClass="content-panel"/>
         </VBox>
     </center>
 </BorderPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.therapy_management_system.controller.UserManagementController"
+            stylesheets="@../css/style.css">
+
+    <ScrollPane fitToWidth="true" fitToHeight="true"
+                AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+                AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+                style="-fx-background-color:transparent; -fx-background:#f0f4f8;">
+
+        <VBox spacing="16" style="-fx-padding:24;">
+            <HBox alignment="CENTER_LEFT">
+                <VBox spacing="2" HBox.hgrow="ALWAYS">
+                    <Label text="User Management" styleClass="page-title"/>
+                    <Label text="Manage Admin and Receptionist accounts (Admin only)"
+                           styleClass="page-subtitle"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="16">
+                <VBox styleClass="page-card" spacing="12" prefWidth="340">
+                    <VBox spacing="4">
+                        <Label text="User ID" styleClass="field-label"/>
+                        <TextField fx:id="txtUserId" styleClass="form-field"
+                                   editable="false" style="-fx-background-color:#e9ecef;"/>
+                    </VBox>
+                    <VBox spacing="4">
+                        <Label text="Full Name *" styleClass="field-label"/>
+                        <TextField fx:id="txtFullName" promptText="Full name"
+                                   styleClass="form-field"/>
+                        <Label fx:id="lblNameError" styleClass="error-label" visible="false" managed="false"/>
+                    </VBox>
+                    <VBox spacing="4">
+                        <Label text="Username *" styleClass="field-label"/>
+                        <TextField fx:id="txtUsername" promptText="4-30 alphanumeric"
+                                   styleClass="form-field"/>
+                        <Label fx:id="lblUsernameError" styleClass="error-label" visible="false" managed="false"/>
+                    </VBox>
+                    <VBox spacing="4">
+                        <Label text="Password *" styleClass="field-label"/>
+                        <StackPane>
+                            <PasswordField fx:id="txtPassword" styleClass="form-field"
+                                           promptText="Min 6 chars, letters + digits"/>
+                            <TextField fx:id="txtPasswordVisible" styleClass="form-field"
+                                       promptText="Min 6 chars, letters + digits"
+                                       visible="false" managed="false"/>
+                            <HBox alignment="CENTER_RIGHT" style="-fx-padding:0 10 0 0;" pickOnBounds="false">
+                                <Button fx:id="btnToggle" text="👁" styleClass="eye-btn"
+                                        onAction="#handleToggle"/>
+                            </HBox>
+                        </StackPane>
+                        <Label fx:id="lblPasswordError" styleClass="error-label" visible="false" managed="false"/>
+                    </VBox>
+                    <VBox spacing="4">
+                        <Label text="Role *" styleClass="field-label"/>
+                        <ComboBox fx:id="cmbRole" styleClass="combo-box" prefWidth="Infinity"/>
+                    </VBox>
+                    <VBox spacing="4">
+                        <Label text="Email *" styleClass="field-label"/>
+                        <TextField fx:id="txtEmail" promptText="user@serenity.lk"
+                                   styleClass="form-field"/>
+                        <Label fx:id="lblEmailError" styleClass="error-label" visible="false" managed="false"/>
+                    </VBox>
+                    <VBox spacing="4">
+                        <Label text="Phone *" styleClass="field-label"/>
+                        <TextField fx:id="txtPhone" promptText="07XXXXXXXX"
+                                   styleClass="form-field"/>
+                        <Label fx:id="lblPhoneError" styleClass="error-label" visible="false" managed="false"/>
+                    </VBox>
+
+                    <HBox spacing="8" style="-fx-padding:8 0 0 0;">
+                        <Button text="Save"    styleClass="btn-primary"   onAction="#handleSave"   prefWidth="80"/>
+                        <Button text="Update"   styleClass="btn-warning"   onAction="#handleUpdate" prefWidth="80"/>
+                        <Button text="Delete"   styleClass="btn-danger"    onAction="#handleDelete" prefWidth="80"/>
+                        <Button text="Clear"    styleClass="btn-secondary" onAction="#handleClear"  prefWidth="80"/>
+                    </HBox>
+                    <Label fx:id="lblStatus" text="" styleClass="page-subtitle" wrapText="true"/>
+                </VBox>
+
+                <VBox styleClass="page-card" spacing="12" HBox.hgrow="ALWAYS">
+                    <Label text="System Users" styleClass="page-title" style="-fx-font-size:15px;"/>
+                    <TableView fx:id="tblUsers" VBox.vgrow="ALWAYS"
+                               styleClass="table-view" onMouseClicked="#handleTableClick">
+                        <columns>
+                            <TableColumn fx:id="colId" text="ID" prefWidth="70"/>
+                            <TableColumn fx:id="colName" text="Name" prefWidth="160"/>
+                            <TableColumn fx:id="colUsername" text="Username" prefWidth="130"/>
+                            <TableColumn fx:id="colRole" text="Role" prefWidth="110"/>
+                            <TableColumn fx:id="colEmail" text="Email" prefWidth="180"/>
+                            <TableColumn fx:id="colPhone" text="Phone" prefWidth="120"/>
+                        </columns>
+                        <placeholder><Label text="No users found." styleClass="page-subtitle"/></placeholder>
+                    </TableView>
+                </VBox>
+            </HBox>
+        </VBox>
+    </ScrollPane>
+</AnchorPane>

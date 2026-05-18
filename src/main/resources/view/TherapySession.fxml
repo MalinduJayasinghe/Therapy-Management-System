@@ -24,7 +24,6 @@
             </HBox>
 
             <HBox spacing="16">
-                <!-- Form -->
                 <VBox styleClass="page-card" spacing="12" prefWidth="360">
                     <VBox spacing="4">
                         <Label text="Session ID" styleClass="field-label"/>
@@ -54,7 +53,7 @@
                         </VBox>
                         <VBox spacing="4" HBox.hgrow="ALWAYS">
                             <Label text="Session Time *" styleClass="field-label"/>
-                            <TextField fx:id="txtSessionTime" promptText="HH:MM (e.g. 09:00)"
+                            <TextField fx:id="txtSessionTime" promptText="(e.g. 09:00)"
                                        styleClass="form-field"/>
                             <Label fx:id="lblTimeError" styleClass="error-label" visible="false" managed="false"/>
                         </VBox>
@@ -69,27 +68,26 @@
                     </VBox>
 
                     <HBox spacing="8" style="-fx-padding:8 0 0 0;">
-                        <Button text="📅 Book"     styleClass="btn-primary"   onAction="#handleBook"   prefWidth="80"/>
-                        <Button text="✏ Update"    styleClass="btn-warning"   onAction="#handleUpdate" prefWidth="80"/>
-                        <Button text="❌ Cancel"    styleClass="btn-danger"    onAction="#handleCancel" prefWidth="80"/>
-                        <Button text="🔄 Clear"     styleClass="btn-secondary" onAction="#handleClear"  prefWidth="80"/>
+                        <Button text="Book" styleClass="btn-primary" onAction="#handleBook" prefWidth="80"/>
+                        <Button text="Update" styleClass="btn-warning" onAction="#handleUpdate" prefWidth="80"/>
+                        <Button text="Cancel" styleClass="btn-danger" onAction="#handleCancel" prefWidth="80"/>
+                        <Button text="Clear" styleClass="btn-secondary" onAction="#handleClear" prefWidth="80"/>
                     </HBox>
                     <Label fx:id="lblStatus" text="" styleClass="page-subtitle" wrapText="true"/>
                 </VBox>
 
-                <!-- Table -->
                 <VBox styleClass="page-card" spacing="12" HBox.hgrow="ALWAYS">
                     <Label text="Session Records" styleClass="page-title" style="-fx-font-size:15px;"/>
                     <TableView fx:id="tblSessions" VBox.vgrow="ALWAYS"
                                styleClass="table-view" onMouseClicked="#handleTableClick">
                         <columns>
-                            <TableColumn fx:id="colId"           text="ID"         prefWidth="70"/>
-                            <TableColumn fx:id="colPatientName"  text="Patient"    prefWidth="140"/>
-                            <TableColumn fx:id="colTherapist"    text="Therapist"  prefWidth="140"/>
-                            <TableColumn fx:id="colProgram"      text="Program"    prefWidth="160"/>
-                            <TableColumn fx:id="colDate"         text="Date"       prefWidth="100"/>
-                            <TableColumn fx:id="colTime"         text="Time"       prefWidth="70"/>
-                            <TableColumn fx:id="colStatus"       text="Status"     prefWidth="100"/>
+                            <TableColumn fx:id="colId" text="ID" prefWidth="70"/>
+                            <TableColumn fx:id="colPatientName" text="Patient" prefWidth="140"/>
+                            <TableColumn fx:id="colTherapist" text="Therapist" prefWidth="140"/>
+                            <TableColumn fx:id="colProgram" text="Program" prefWidth="160"/>
+                            <TableColumn fx:id="colDate" text="Date" prefWidth="100"/>
+                            <TableColumn fx:id="colTime" text="Time" prefWidth="70"/>
+                            <TableColumn fx:id="colStatus" text="Status" prefWidth="100"/>
                         </columns>
                         <placeholder><Label text="No sessions found." styleClass="page-subtitle"/></placeholder>
                     </TableView>

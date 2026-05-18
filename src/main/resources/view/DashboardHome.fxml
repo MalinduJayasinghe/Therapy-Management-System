@@ -15,50 +15,45 @@
 
         <VBox spacing="24" style="-fx-padding:24;">
 
-            <!-- Welcome banner -->
             <VBox styleClass="page-card" spacing="4">
                 <Label fx:id="lblWelcome" text="Welcome back!" styleClass="page-title"/>
-                <Label fx:id="lblDate"    text="" styleClass="page-subtitle"/>
+                <Label fx:id="lblDate" text="" styleClass="page-subtitle"/>
             </VBox>
 
-            <!-- Stat cards row -->
             <HBox spacing="16">
                 <VBox styleClass="stat-card" spacing="6" alignment="TOP_LEFT">
                     <Label text="👤" styleClass="stat-card-icon"/>
                     <Label fx:id="lblPatientCount" text="0" styleClass="stat-card-value"/>
-                    <Label text="Total Patients"    styleClass="stat-card-label"/>
+                    <Label text="Total Patients" styleClass="stat-card-label"/>
                 </VBox>
                 <VBox styleClass="stat-card" spacing="6" alignment="TOP_LEFT">
                     <Label text="📅" styleClass="stat-card-icon"/>
                     <Label fx:id="lblSessionCount" text="0" styleClass="stat-card-value"/>
-                    <Label text="Therapy Sessions"  styleClass="stat-card-label"/>
+                    <Label text="Therapy Sessions" styleClass="stat-card-label"/>
                 </VBox>
                 <VBox styleClass="stat-card" spacing="6" alignment="TOP_LEFT">
                     <Label text="👨‍💼" styleClass="stat-card-icon"/>
                     <Label fx:id="lblTherapistCount" text="0" styleClass="stat-card-value"/>
-                    <Label text="Therapists"         styleClass="stat-card-label"/>
+                    <Label text="Therapists" styleClass="stat-card-label"/>
                 </VBox>
                 <VBox styleClass="stat-card" spacing="6" alignment="TOP_LEFT">
                     <Label text="💰" styleClass="stat-card-icon"/>
                     <Label fx:id="lblRevenue" text="LKR 0" styleClass="stat-card-value"
                            style="-fx-font-size:18px;"/>
-                    <Label text="Total Revenue"      styleClass="stat-card-label"/>
+                    <Label text="Total Revenue" styleClass="stat-card-label"/>
                 </VBox>
             </HBox>
 
-            <!-- Recent sessions table -->
             <VBox styleClass="page-card" spacing="12">
-                <Label text="Recent Therapy Sessions" styleClass="page-title"
-                       style="-fx-font-size:15px;"/>
-                <TableView fx:id="tblRecentSessions" prefHeight="250"
-                           styleClass="table-view">
+                <Label text="Recent Therapy Sessions" styleClass="page-title" style="-fx-font-size:15px;"/>
+                <TableView fx:id="tblRecentSessions" prefHeight="250" styleClass="table-view">
                     <columns>
-                        <TableColumn fx:id="colSessionId"      text="Session ID"  prefWidth="90"/>
-                        <TableColumn fx:id="colPatientName"    text="Patient"     prefWidth="160"/>
-                        <TableColumn fx:id="colTherapistName"  text="Therapist"   prefWidth="160"/>
-                        <TableColumn fx:id="colProgramName"    text="Program"     prefWidth="180"/>
-                        <TableColumn fx:id="colSessionDate"    text="Date"        prefWidth="100"/>
-                        <TableColumn fx:id="colStatus"         text="Status"      prefWidth="100"/>
+                        <TableColumn fx:id="colSessionId" text="Session ID" prefWidth="90"/>
+                        <TableColumn fx:id="colPatientName" text="Patient" prefWidth="160"/>
+                        <TableColumn fx:id="colTherapistName" text="Therapist" prefWidth="160"/>
+                        <TableColumn fx:id="colProgramName" text="Program" prefWidth="180"/>
+                        <TableColumn fx:id="colSessionDate" text="Date" prefWidth="100"/>
+                        <TableColumn fx:id="colStatus" text="Status" prefWidth="100"/>
                     </columns>
                 </TableView>
             </VBox>
