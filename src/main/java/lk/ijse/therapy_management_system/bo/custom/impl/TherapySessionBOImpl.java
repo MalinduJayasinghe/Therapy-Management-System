@@ -43,7 +43,6 @@ public class TherapySessionBOImpl implements TherapySessionBO {
         TherapyProgram program = programDAO.findById(dto.getProgramId())
                 .orElseThrow(() -> new NotFoundException("Therapy program not found: " + dto.getProgramId()));
 
-        // Scheduling conflict: therapist already booked at that date/time
         if (sessionDAO.hasConflict(dto.getTherapistId(), dto.getSessionDate(), dto.getSessionTime())) {
             throw new ScheduleConflictException(
                     "Therapist " + therapist.getName() + " is already booked on "
